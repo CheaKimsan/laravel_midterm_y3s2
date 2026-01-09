@@ -18,6 +18,6 @@ Route::get('/course', [CourseController::class, 'viewCourse'])->name('course');
 
 Route::get('/enrollment', [EnrollmentController::class, 'viewEnrollment'])->name('enrollment');
 
-// Route::get('/testing', function () {
-//     return view('welcome');
-// })->name('testing');
+Route::get('/testing', function () {
+    return view('welcome');
+})->name('testing');
