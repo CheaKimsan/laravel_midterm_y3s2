@@ -14,7 +14,7 @@ class StudentController extends Controller
         return view('student.index', compact('students'));
     }
 
-    // Store new student
+    // Insert new student
     public function store(Request $request)
     {
         $validated = $request->validate([
