@@ -1,0 +1,24 @@
+<div id="editEnrollmentModalContainer" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+    <div class="bg-slate-800 w-full max-w-xl rounded-xl shadow-lg p-6 text-white">
+
+        <h2 class="text-xl mb-4">Edit Enrollment</h2>
+
+        <form id="editEnrollmentForm" method="POST" class="space-y-4">
+            @csrf
+            @method('PUT')
+
+            @include('enrollment.form-fields', ['edit' => true])
+
+            <div class="flex justify-end gap-2 pt-2">
+                <button type="button" onclick="closeEditEnrollmentModal()"
+                    class="px-4 py-2 bg-gray-600 rounded hover:bg-gray-500">
+                    Cancel
+                </button>
+
+                <button type="submit" class="px-4 py-2 bg-amber-500 rounded hover:bg-amber-600">
+                    Update
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
